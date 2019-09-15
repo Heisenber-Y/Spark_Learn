@@ -6,7 +6,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object WordCount {
   def main(args: Array[String]): Unit = {
     //sc.textFile("/home/hadoop/input").flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_).collect
-    //1.创建SparkConf并设置App名称
+    //1.创建SparkConf并设置App名称阿斯顿
   val config:SparkConf = new SparkConf().setMaster("local[*]").setAppName("WC")
 
     //2.创建SparkContext，该对象是提交Spark App的入口
