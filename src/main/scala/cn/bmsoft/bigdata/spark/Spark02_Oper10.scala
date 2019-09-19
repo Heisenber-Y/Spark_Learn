@@ -15,7 +15,9 @@ object Spark02_Oper10 {
     println("====")
     val listRdd: RDD[Int] = coalesceRDD.coalesce(3)
     println(listRdd.partitions.size)
-
+    /*
+    *20190919
+    * */
     //distinctRDD.collect().foreach(println)
 
 
