@@ -1,0 +1,188 @@
+
+
+
+
+
+
+sparksql 启用压缩方法(session级别，所以断开以后无法继续使用该set 设置)
+进去sparksql后 开启此设置
+创建表是直接指定 stored as 类型即可， 
+
+使用snappy压缩
+ set spark.sql.parquet.compression.codec=snappy;
+不适用snappy压缩
+set spark.sql.parquet.compression.codec=uncompressed;
+
+
+
+sql提取 ：
+提取出sql 根据.分割，拿去第一个字段 然后在排序去重
+java -jar JsqlParase.jar q.sql |sort |uniq |awk -F '.' '{print $1}' | sort | uniq
+
+提取出sql 并且排序加去重
+java -jar JsqlParase.jar q.sql |sort |uniq 
+
+
+20191205：
+flume 在使用taildir传输多个文件数据的时候，需要使用转义一下   (\.*log ) 这种方式才能将多个文件传输到对应的集群路径中去， 正常情况下不能识别多个文件
+
+
+	client.sources.a1.filegroups.epgtest = /tpdata/data/flume/test1/\.*log
+
+
+
+华为HD6.5.1 集群 WebUI：
+10.28.133.201:8080/web
+admin/!QAZ2wsx 
+
+
+使用tpdata 带密码授权访问：
+source /tpdata/hadoopclient/bigdata_env
+kinit tpdata 
+password:!QAZ2wsx 
+
+
+
+
+
+SVN 地址：
+https://10.1.17.171/svn/新统一数据平台实施项目/
+
+username:yemenglong
+password:aidNMr1y
+
+
+
+一、HD登录信息
+登录FusionInsight Manager  界面
+http://10.28.133.190:8080/web/
+admin/Taiping@12345
+
+
+二、GaussDB登录信息
+登录FusionInsight Manager  界面
+http://10.28.133.196:8080/web/
+admin/Taiping@1234
+
+方式一：命令行
+登录10.28.133.179/10.28.133.180
+用root用户登录root/1qaz@WSX3edc
+切换用户su omm
+初始化环境变量source ${BIGDATA_HOME}/mppdb/.mppdbgs_profile
+进入GuassDB数据库 gsql -d postgres -p 25308
+
+
+方式二：图形化登录
+DATA Studio 登录信息：
+name:tp_datalake
+hostname:10.28.133.179
+port:25308
+tablespace:tp_datalake
+username:dtlake
+password:!QAZ2wsx
+
+
+oracle 账号密码：
+ 用户/密码：
+tableau/Taiping12#$%6
+连接串：
+(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.28.133.181)(PORT = 1521))(CONNECT_DATA =(SERVICE_NAME = tpsjzla)(INSTANCE_NAME= tpsjzla)))
+
+命令行登录：
+sqlplus tableau/Taiping12\#\$%6@tpsjzla
+
+
+表：
+ODS_EBS_03_DW_EBS_TPL_GL_DATA
+ODS_EBS_03_DW_EBS_TPL_GL_6KW
+ODS_EBS_03_DW_EBS_TPL_GL_10KW
+
+select * from ODS_EBS_03_DW_EBS_TPL_GL_10KW where rownum <2 ;
+
+LISTENER=
+(DESCRIPTION_LIST=
+(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.28.133.181)(PORT = 1521))(CONNECT_DATA =(SERVICE_NAME = tpsjzla)(INSTANCE_NAME= tpsjzla)))
+)
+
+
+
+
+
+
+
+
+
+
+
+
+华为HD后台登录：
+10.28.133.183-10.28.133.187 5台(WebUI无10.28.133.188服务器，但是可以登录)
+username:root
+password:1qaz@WSX3edc
+
+
+
+GaussDB 后台登录：
+10.28.133.177-	10.28.133.182 （WebUI无10.28.133.181服务器，但是可以登录)
+username: root
+password:1qaz@WSX3edc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ +[^\n]*   把空格后面的所有数据去除
+
+
+20191112  最新报表需求确认：
+01 【2_指标维度属性表】使用的维度表做记录
+02 【1_指标数据标准表】--业务报表 让业务提供计算口径或者结果表
+03  确认系统表那些需要接入（T\F）
+04  业务报表继续进行确认
+
+
+
+
+
+
+20191113 会议：
+1：明确需要做保费相关的报表主题
+2：后台数据湖的相关数据接入
+3：前台页面展示
+
+速赢报表汇总 当前处理 前14张报表的具体数据接入口径
+
+
+20191114：
+1：数据仓库和驾驶舱在明年2月份需要全部整理出来
+入库方案，对接方案，需求方案
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
