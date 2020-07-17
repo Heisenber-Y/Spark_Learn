@@ -1,0 +1,32 @@
+实体,实体中文名,数据量,
+account_entity,账号,5318380,
+case_entity,案件,17911646,
+enterprise_entity,企业,268001,
+person_entity,人,41343068,
+policyno_entity,保单,88921366,
+vehicle_entity,车,5865870,
+telephone_entity,电话,26298518,
+,,,
+实体详情,实体种类,实体描述,实体数据量
+case_entity,,案件实体,17911646
+account_entity,ACCOUNT_THIRD_PARTY,被保人账号,309606
+account_entity,ACCOUNT_INSURED,三者账号,5014955
+enterprise_entity ,EP_INSURED,企业被保人,34709
+enterprise_entity ,HOSPITAL,医院,2686
+enterprise_entity ,REPAIRFACTORY,修理厂,177550
+enterprise_entity ,EP_APPLI,企业投保人,80836
+person_entity,CHECHKER,查勘员,5499
+person_entity,ACCIDENTDRIVER,标的车驾驶员,2571495
+person_entity,BENE,受益人,1287930
+person_entity,THIRD_PARTY_ACCIDENTDRIVER,三者车驾驶员,2276437
+person_entity,THEINJURED,案件被保人伤者,557061
+person_entity,BUS,业务员,136712
+person_entity,DES,定损员,5651
+person_entity,APPLI,投保人,35450041
+person_entity,INSURED,被保人,27502506
+policyno_entity,ACCIDENT_OF_CASE,意外险,15208034
+policyno_entity,COMM_OF_CASE,商业险,33007117
+policyno_entity,CREDIT_OF_CASE,信用险,17958
+policyno_entity,CTP_OF_CASE,交强险,52087944
+policyno_entity,HEALTH_OF_CASE,健康险,7792569
+vehicle_entity ,Accident_Vehicle,标的车,5865869
