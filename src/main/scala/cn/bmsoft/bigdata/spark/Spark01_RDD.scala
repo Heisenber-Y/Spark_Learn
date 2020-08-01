@@ -19,7 +19,7 @@ object Spark01_RDD {
     //外部存储中创建
 
 
-    val fileRDD: RDD[String] = sc.textFile("on")
+    val fileRDD: RDD[String] = sc.textFile("in")
 
     listRDD.saveAsTextFile("output")
 
